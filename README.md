@@ -152,3 +152,7 @@ SentinelCX is designed to empower customer support teams with actionable, real-t
 - Clean API separation between frontend and backend.
 - Use sample ticket data in `data-samples/` for testing.
 - Bonus: Upload Data feature to simulate uploading support logs (JSON format).
+
+---
+
+Here the site is live at : https://ai-agent-hackathon-sentinel-cx.vercel.app/
