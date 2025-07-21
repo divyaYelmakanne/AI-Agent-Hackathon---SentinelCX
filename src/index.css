@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* SentinelCX Professional Color Palette */
+    --background: 245 8% 98%;
+    --foreground: 222 10% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 10% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 10% 8%;
+
+    /* Primary: Professional Deep Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 75%;
+    --primary-dark: 217 91% 45%;
+
+    /* Secondary: Sophisticated Purple */
+    --secondary: 262 83% 65%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-dark: 262 83% 50%;
+
+    /* Muted: Warm Gray */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Accent: Vibrant Teal */
+    --accent: 173 80% 40%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 173 80% 55%;
+
+    /* Professional Surface Colors */
+    --surface: 220 14% 98%;
+    --surface-foreground: 222 10% 8%;
+    --surface-hover: 220 14% 94%;
+
+    /* Sentiment Colors - Enhanced */
+    --sentiment-positive: 142 76% 36%;
+    --sentiment-positive-light: 142 76% 85%;
+    --sentiment-negative: 0 84% 60%;
+    --sentiment-negative-light: 0 84% 85%;
+    --sentiment-neutral: 43 74% 66%;
+    --sentiment-neutral-light: 43 74% 85%;
+    --sentiment-mixed: 262 83% 58%;
+    --sentiment-mixed-light: 262 83% 85%;
+
+    /* Alert Colors - Enhanced */
+    --alert-success: 142 71% 45%;
+    --alert-success-bg: 142 71% 95%;
+    --alert-warning: 38 92% 50%;
+    --alert-warning-bg: 38 92% 95%;
+    --alert-danger: 0 84% 60%;
+    --alert-danger-bg: 0 84% 95%;
+    --alert-info: 199 89% 48%;
+    --alert-info-bg: 199 89% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 14% 91%;
+    --input: 220 14% 96%;
+    --ring: 217 91% 60%;
+
+    /* Enhanced Professional Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-dark)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-light)));
+    --gradient-background: radial-gradient(ellipse at top, hsl(220 14% 99%), hsl(var(--background)));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 14% 99%));
+    --gradient-success: linear-gradient(135deg, hsl(var(--sentiment-positive)), hsl(142 76% 50%));
+    --gradient-danger: linear-gradient(135deg, hsl(var(--sentiment-negative)), hsl(0 84% 70%));
+
+    /* Enhanced Professional Shadows */
+    --shadow-soft: 0 2px 10px hsl(220 9% 9% / 0.08);
+    --shadow-medium: 0 4px 20px hsl(220 9% 9% / 0.12);
+    --shadow-large: 0 8px 30px hsl(220 9% 9% / 0.15);
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.25);
+    --shadow-accent: 0 0 20px hsl(var(--accent) / 0.2);
+    --shadow-colored: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-alert-danger: 0 0 20px hsl(var(--alert-danger) / 0.2);
+    --shadow-alert-warning: 0 0 20px hsl(var(--alert-warning) / 0.2);
+    --shadow-alert-info: 0 0 20px hsl(var(--alert-info) / 0.2);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
